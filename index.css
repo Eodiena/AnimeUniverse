@@ -7,7 +7,7 @@ box-sizing: border-box;
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap'),url('mediaqury.css');
 @font-face {
 font-family:AnimeUniverse;
-src: url('fonts/njnaruto.ttf');
+src: url('njnaruto.ttf');
 }
 html{
   scroll-behavior: smooth !important;
