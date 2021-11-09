@@ -1,0 +1,1100 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap'),url('mediaqury.css');
+@font-face {
+font-family:AnimeUniverse;
+src: url('fonts/njnaruto.ttf');
+}
+html{
+  scroll-behavior: smooth !important;
+}
+body{
+width: 100%;
+height: 100%;
+}
+a,ul
+{
+text-decoration: none;
+list-style-type: none;
+
+}
+.main{
+position: relative;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+grid-template-rows:110vh 500px 70vh 105vh 100vh 100vh;
+background: none;
+}
+.landing
+{
+background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/home-bg-img.png?alt=media&token=d9e1330b-3252-4d1d-842f-24bc178ab621');
+background-size:cover;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 60px 100vh;
+}
+.landing >.header{
+background: transparent;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+backdrop-filter: blur(10px);
+position: fixed;
+width: 100%;
+height: 65px;
+top: 0px;
+z-index: 1000;
+
+}
+.toggle{
+display: none;
+}
+.header .toggle>img{
+  width: 40px;
+}
+.navbar{
+padding: 5px;
+width: 50%;
+}
+.navbar ul{
+display: flex;
+justify-items: flex-start;
+justify-content: space-evenly;
+}
+.navbar ul li>a{
+padding:0.9em;
+}
+.navbar ul li>a:hover{
+background:linear-gradient(pink,deeppink,mediumpurple 60px);
+border-radius: 20px;
+color: white;
+}
+.logo{
+border: none;
+padding: 5px;
+width: 50%;
+display: flex;
+justify-content: flex-start;
+font-family:AnimeUniverse;
+font-size: 20px;
+color: transparent;
+background: linear-gradient(orange,red);
+-webkit-background-clip: text;
+filter: drop-shadow(2px 2px black);
+pointer-events: none;
+user-select: none;
+}
+.page{
+
+display: grid;
+grid-template-rows:90%;
+grid-template-columns:1fr 1fr;
+}
+.page .content{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+gap: 30px;
+}
+.page .content>h2{
+font-size: 3em;
+font-family:AnimeUniverse;
+color: white;
+/*  filter: drop-shadow(2px 2px 5px black); */
+letter-spacing: 5px;
+text-shadow:2px 2px 5px rgba(0, 0, 0, .9);
+color: deeppink;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: colore;
+animation-direction: alternate;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+@keyframes colore {
+0%
+{
+color: mediumpurple;
+}
+50%{
+color: deeppink;
+}
+100%{
+color: purple;
+}
+}
+.page .content h4{
+font-family: 'Balsamiq Sans', cursive;
+font-size: 2em;
+color: red;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
+}
+.download{
+border: none;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-content: space-between;
+gap: 20px;
+}
+.download>.installApk,.PlayStore{
+padding: 10px;
+width: 200px;
+border-radius: 30px;
+border: none;
+background:linear-gradient(pink,deeppink,mediumpurple 80px);
+cursor: pointer;
+display: none;
+}
+.installApk:hover{
+color: white;
+}
+.PlayStore>img:hover{
+filter: invert(100%);
+}
+.PlayStore>img{
+width: 100%;
+}
+.phone{
+background:none;
+display: grid;
+place-items: center;
+
+}
+.body{
+height: 500px;
+width: 300px;
+border: 25px solid white;
+border-top: 35px solid white;
+border-bottom: 60px solid white;
+border-radius: 20px;
+box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+outline: 1px solid gray;
+animation-name: updown;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+animation-direction: normal;
+position: relative;
+overflow: hidden;
+
+}
+@keyframes updown {
+0%{top: 0; bottom: 0; }
+50%{top: 25px; bottom: 0; }
+100%{top: 0px; bottom: 25px; }
+}
+.body:hover{
+animation-play-state: paused;
+}
+.screen{
+background-color: white;
+height: 100%;
+width: 100%;
+overflow:hidden scroll;
+display: grid;
+grid-template-columns:1fr;
+grid-template-rows: 40px 200px 200px 200px;
+border: 2px solid rgba(0, 0, 0, .2);
+}
+.screen::-webkit-scrollbar{
+width: 0px;
+}
+.navphone{
+background: #7e77e8;
+border-bottom: 2px solid gray;
+position: relative;
+display: flex;
+justify-content: space-between;
+}
+.navphone>.navhamicon{
+ border: 1px solid white;
+ display: flex;
+ align-items: center;
+ background: none;
+ border: none;
+}
+.navphone .navhamicon>img{
+ width: 50px;
+ height: 50px;
+}
+.navphone>.navimg{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.navimg:first-child{
+ border-radius: 70px;
+ display: none;
+}
+
+
+.sidebar{
+background: white;
+position:absolute;
+height:100%;
+width: 200px;
+left: -100%;
+top: 0;
+z-index: 30000;
+transition: 0.4s;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.slidebar2{
+  left: 0%;
+  transition: 0.4s;
+}
+.sidebar>.topimg{
+  border: 0px solid black;
+  height: 100px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/abot%20anime.png?alt=media&token=87af0f23-2239-4a38-a96a-06772dd367fb');
+  background-size: cover;
+}
+.hindidub,.engdub,.engmovi,.japanesedub,.explor{
+ border-bottom: 2px solid gray;
+ padding: 2px;
+ font-size: 18px;
+ height: 40px;
+ line-height: 20px;
+ display: flex;
+align-items: center;
+padding-bottom: 5px;
+}
+.trend{
+background: white;
+padding: 5px;
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.trend>.trendtitle{
+  background: red;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:0px 2px 3px rgba(0, 0, 0, .2),inset 0px -5px 8px orangered;
+}
+.trend>.trendimg{
+  width: 100%;
+  height: 125px;
+  background: transparent;
+  position: relative;
+  border: none;
+  padding-top: 7px;
+}
+.trend .trendimg>img{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+.videoplayer{
+  border: none;
+  position: absolute;
+  z-index: 1000;
+  padding: 20px;
+}
+.hindidubb{
+background-color:transparent;
+width: 100%;
+padding: 5px;
+display: flex;
+flex-direction: column;
+
+height: 190px;
+}
+.hindidubb>.slidetitle{
+  background: #444;
+  width: 100%;
+   border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 100%;
+}
+.hindidubb .slidetitle>.hindiser{
+  background-color: limegreen;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  padding: 3px;
+  padding-left: 8px;
+  color: white;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1),1px 1px 2px rgba(0, 0, 0, .1);
+}
+
+.slidetitle>.hindislide{
+  display: flex;
+  height: 130px;
+  padding: 10px;
+  flex-direction: row;
+  gap: 20px;
+  gap: 3px;
+}
+.hindislide>img{
+  display: block;
+  width: 100%;
+}
+.series{
+background-color:transparent;
+width: 100%;
+padding: 5px;
+display: flex;
+flex-direction: column;
+height: 190px;
+}
+.series>.seriestitle{
+  background: #444;
+  width: 100%;
+   border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 100%;
+}
+.series .seriestitle>.seriesser{
+  background-color:#ba55d3;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  padding: 3px;
+  padding-left: 8px;
+  color: white;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1),1px 1px 2px rgba(0, 0, 0, .1);
+}
+.seriestitle>.seriesslide{
+  display: flex;
+  height: 130px;
+  padding: 10px;
+  flex-direction: row;
+  gap: 20px;
+  gap: 3px;
+}
+.seriesslide>img{
+  display: block;
+  width: 100%;
+}
+.regform{
+position: fixed;
+width: 50%;
+height: 80px;
+padding: 5px;
+border-radius: 20px;
+display: flex;
+z-index: 400000;
+background: transparent;
+backdrop-filter: blur(10px);
+justify-content:space-evenly;
+flex-direction: row;
+align-items: center;
+box-shadow: 2px 2px 4px inset pink,-2px -2px 4px inset pink;
+overflow: hidden;
+visibility: hidden;
+}
+.regform .one>input{
+height: 40px;
+border-radius: 10px;
+width: 200px;
+border: none;
+outline: none;
+box-shadow: 2px 2px 3px pink,-2px -2px 3px pink;
+padding: 10px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.regform .two>input{
+height: 40px;
+border-radius: 10px;
+width: 200px;
+border: none;
+outline: none;
+box-shadow: 2px 2px 3px pink,-2px -2px 3px pink;
+padding: 10px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.regform>.submit{
+width: 100px;
+height: 40px;
+border-radius: 20px;
+border: 1px solid pink;
+background-image: linear-gradient(pink,deeppink,mediumpurple);
+box-shadow:inset 1px 1px 3px pink,inset -1px -1px 3px pink;
+}
+.regform>.submit:hover{
+color: white;
+}
+.prereg>.preregnow{
+width: 150px;
+height: 60px;
+border-radius: 30px;
+border: none;
+box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+color: black;
+font-weight: 700;
+background: radial-gradient(mediumpurple,mediumaquamarine);
+transition: 0.5s;
+}
+.prereg>.preregnow:hover{
+color: white;
+transition: 0.5s;
+background: conic-gradient(mediumpurple ,deeppink 3deg,mediumaquamarine);
+}
+.visi{
+visibility: visible;
+}
+.aboutUs{
+position: relative;
+background: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Colored%20Patterns.svg?alt=media&token=4619e99c-44d2-4c06-807f-81c8ee58e9d8'),url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Simple%20Shiny.svg?alt=media&token=86060b2e-04b5-400a-9b38-f5e9e988c0c3');
+background-size: cover;
+padding: 5px;
+}
+.title1{
+display:flex;
+justify-content: center;
+font-size: 60px;
+padding: 10px;
+color: white;
+font-weight: 800;
+font-family: arial;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+}
+.cards{
+border: none;
+height: 350px;
+display: flex;
+gap: 20px;
+justify-content: center;
+flex-direction: row;
+}
+.card1,.card2,.card3{
+background: white;
+padding: 16px;
+width: 25%;
+border-radius: 20px;
+box-shadow:inset 2px 2px 3px pink,inset -2px -2px 3px pink;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+cursor: pointer;
+}
+.card1>.title{
+font-family: arial;
+font-weight: 600;
+text-align: center;
+color: black;
+border-bottom: 2px solid pink;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+font-size: 20px;
+z-index: 4;
+
+}
+.card1>img{
+width: 190px;
+border-radius: 50%;
+object-fit: cover;
+border: 10px solid pink;
+height: 190px;
+
+}
+.card1:hover{
+box-shadow: 2px 2px 3px rgba(0, 0, 0, .5),-2px -2px 3px rgba(0, 0, 0, .5);
+}
+.card1:hover>img{
+width: 190px;
+border-radius: 50%;
+object-fit: cover;
+border: 20px solid pink;
+transition: 0.5s box-shadow;
+box-shadow: 20px 20px 0px 300px pink, -20px -20px 0px 300px pink;
+}
+.card1>.content{
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow:inset 2px 2px 3px pink,inset -2px -2px 3px pink;
+padding: 5px;
+border-radius: 10px;
+font-size: 15px;
+font-family: 'Unica One', cursive;
+font-weight: bold;
+}
+.card2>.title{
+font-family: arial;
+font-weight: 600;
+text-align: center;
+color: black;
+border-bottom: 2px solid pink;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+font-size: 20px;
+z-index: 4;
+
+}
+.card2>img{
+width: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 10px solid orange;
+height: 200px;
+
+}
+.card2:hover{
+box-shadow: 2px 2px 3px rgba(0, 0, 0, .5),-2px -2px 3px rgba(0, 0, 0, .5);
+}
+.card2:hover>.title{
+  border-bottom: 2px solid orange;
+}
+.card2:hover>img{
+width: 190px;
+border-radius: 50%;
+object-fit: cover;
+border: 20px solid orange;
+transition: 0.5s box-shadow ease-in-out;
+box-shadow: 20px 20px 0px 300px orange, -20px -20px 0px 300px orange;
+}
+.card3:hover>.title{
+  border-bottom: 2px solid mediumpurple;
+}
+.card2>.content{
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow:inset 2px 2px 3px pink,inset -2px -2px 3px pink;
+padding: 5px;
+border-radius: 10px;
+font-size: 15px;
+font-family: 'Unica One', cursive;
+font-weight: bold;
+}
+.card2:hover>.content{
+box-shadow: none;
+}
+.card3>.title{
+font-family: arial;
+font-weight: 600;
+text-align: center;
+color: black;
+border-bottom: 2px solid pink;
+text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+font-size: 20px;
+z-index: 4;
+}
+.card3>img{
+width: 190px;
+border-radius: 50%;
+object-fit: cover;
+border: 10px solid mediumpurple;
+
+}
+.card3:hover{
+box-shadow: 2px 2px 3px rgba(0, 0, 0, .5),-2px -2px 3px rgba(0, 0, 0, .5);
+}
+.card3:hover>img{
+width: 190px;
+border-radius: 50%;
+object-fit: cover;
+border: 20px solid mediumpurple;
+transition: 0.5s box-shadow;
+box-shadow: 20px 20px 0px 300px mediumpurple, -20px -20px 0px 300px mediumpurple;
+}
+.card3>.content{
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow:inset 2px 2px 3px pink,inset -2px -2px 3px pink;
+padding: 5px;
+border-radius: 10px;
+font-size: 15px;
+font-family: 'Unica One', cursive;
+font-weight: bold;
+}
+.card3:hover>.content{
+box-shadow: none;
+}
+.timer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.commentbox{
+background:url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Simple%20Shiny%20(2).svg?alt=media&token=c703c5d2-c2af-4086-a543-c8b328d635af');
+overflow: auto;
+position: relative;
+
+}
+.commentbox>h3{
+color: white;
+text-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+font-family: arial;
+border: none;
+text-align: center;
+font-size: 50px;
+}
+#gc-iframe{
+background: transparent;
+width: 100%;
+box-shadow: inset 3px 3px 5px pink,inset -3px -3px 5px pink;
+backdrop-filter: blur(10px);
+backdrop-filter: blur(7px);
+background-color: rgba(0, 0, 0, 0.25);
+}
+.screenSorts{
+background: white;
+display: grid;
+grid-template-rows: 1fr;
+grid-template-columns:1fr 1fr 1fr;
+padding: 10px;
+gap: 10px;
+}
+.screenSorts>img{
+width:100%;
+height: 100vh;
+border-radius: 10px;
+box-shadow: 3px 3px 5px pink;
+}
+.contact{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 100%;
+background: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/b.png?alt=media&token=3bc5fd04-9399-4f0c-9ad0-ac795ed68648');
+padding: 20px;
+}
+.contact>.form{
+
+ width: 100%;
+ height: auto;
+ padding: 10px;
+ display: grid;
+ place-items: center;
+}
+.contact .form>form{
+  height: 400px;
+  width: 70%;
+  padding: 30px;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 1fr 1fr 1fr 1.8fr 1fr;
+  background: #ed143d7d;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, .6),inset -2px -2px 6px rgba(0, 0, 0, .4);
+  border-radius: 10px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  gap: 20px;
+}
+.contact .form form label{
+  color: white;
+}
+.nameGrid{
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+.nameGrid>.names{
+  width: 100%;
+}
+.nameGrid .names>input{
+  width: 100%;
+  font-size: 20px;
+  height: 39px;
+  border: none;
+  border-bottom: 2px solid orangered;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  padding:4px;
+  color: white;
+}
+
+.form form>.email{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.email>input{
+  height: 39px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid red;
+  background: none;
+  outline: none;
+  padding:4px;
+  font-size: 20px;
+  color: white;
+}
+
+form>.gender{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+form .gender>select{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid orangered;
+}
+form .gender select>option{
+ color: white;
+ background: #ed143d7d;
+ cursor: pointer;
+ 
+}
+form .message{
+  width: 100%;
+}
+form .message>label{
+  text-transform: capitalize;
+}
+form .message>input{
+ height: 39px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid red;
+  background: none;
+  outline: none;
+  padding:4px;
+  font-size: 20px;
+  color: white;
+}
+form .submit{
+  width: 100%;
+}
+form .submit>input{
+  height: 39px;
+  padding:4px;
+  border-radius: 10px;
+  width: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  background: none;
+  color: white;
+   transition: 30s;
+}
+form .submit>input:hover{
+  background: linear-gradient(red,darkred),linear-gradient(lightpink,deeppink);
+  background-blend-mode: screen;
+}
+.Youtube>img{
+
+  width: 60%;
+}
+.telegram>img{
+
+  width:40%;
+}
+.instagram>img{
+
+  width: 40%;
+}
+.MailUs>img{
+
+  width:45%;
+}
+.social{
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  padding: 20px;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr) ;
+}
+.telegram,.Youtube,.MailUs,.instagram{
+  display: grid;
+  place-items: center;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0,.5), -5px 5px 8px rgba(0, 0, 0,.5);
+}
+
+.Youtube{
+  background: orange;
+  backdrop-filter: blur(5px) saturate(151%);
+    -webkit-backdrop-filter: blur(5px) saturate(151%);
+    background-color: rgba(203, 90, 221, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.Youtube>.subscribe{
+  background: red;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  position: absolute;
+  transition: 0.6s ease;
+   display: grid;
+  place-items: center;
+}
+.Youtube:hover>.subscribe{
+  height: 100%;
+}
+.subscribe>span{
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.8s;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  color: white;
+}
+.subscribe span>a{
+  color: white;
+}
+.subscribe>span:hover{
+  color: white;
+  background: crimson;
+}
+
+
+.telegram{
+  background: orange;
+  backdrop-filter: blur(5px) saturate(151%);
+    -webkit-backdrop-filter: blur(5px) saturate(151%);
+    background-color: rgba(203, 90, 221, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.telegram>.join{
+  background: #0088cc;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  position: absolute;
+  transition: 0.6s ease;
+   display: grid;
+  place-items: center;
+}
+.telegram:hover>.join{
+  height: 100%;
+}
+.join>span{
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.8s;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+.join span>a{
+  color: white;
+}
+.join>span:hover{
+  color: white;
+  background: crimson;
+}
+
+
+
+.instagram{
+  backdrop-filter: blur(5px) saturate(151%);
+    -webkit-backdrop-filter: blur(5px) saturate(151%);
+    background-color: rgba(203, 90, 221, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.instagram>.follow{
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  position: absolute;
+  transition: 0.6s ease;
+   display: grid;
+  place-items: center;
+}
+.instagram:hover>.follow{
+  height: 100%;
+}
+.follow>span{
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.8s;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+.follow span>a{
+  color: white;
+}
+.follow>span:hover{
+  color: white;
+  background: crimson;
+}
+
+
+
+
+
+.MailUs{
+  background: orange;
+  backdrop-filter: blur(5px) saturate(151%);
+    -webkit-backdrop-filter: blur(5px) saturate(151%);
+    background-color: rgba(203, 90, 221, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.MailUs>.mail{
+  background: #EA4335;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  position: absolute;
+  transition: 0.6s ease;
+   display: grid;
+  place-items: center;
+}
+.MailUs:hover>.mail{
+  height: 100%;
+}
+.mail>span{
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.8s;
+  width: 100px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+.mail span>a{
+  color: white;
+}
+.mail>span:hover{
+  color: white;
+  background: gray;
+}
+.downloadpg{
+  background:linear-gradient(deeppink,mediumpurple,aqua); 
+  border: none;
+  padding: 20px;
+}
+
+.downpage{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:100%;
+  padding: 20px;
+
+}
+.downpage>.screenslide{
+ background: white;
+ width: 300px;
+  height: 90vh;
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, .7),-2px -2px 8px rgba(0, 0, 0, .7);
+  animation-name: slider;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  background-size: 100%;
+}
+@keyframes slider {
+ 0%{background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Google%20Pixel%204%20XL%20Screenshot%201.png?alt=media&token=a21e79bb-5d31-432c-9d54-a69b30b44125');} 
+ 50%{background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Google%20Pixel%204%20XL%20Screenshot%202.png?alt=media&token=b2a57923-8420-4f8d-b184-7fabca08d861');}
+ 100%{background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Google%20Pixel%204%20XL%20Screenshot%203.png?alt=media&token=e1309159-9fce-4ec9-8029-15209d30af95');}
+}
+.downpage>.timer11{
+  border: 1px solid white;
+  height: 100px;
+  width: 200px;
+}
+
+.downpage>.comming11{
+  background:none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+.comming11>h3{
+  font-size: 3em;
+  text-align: center;
+  font-family: AnimeUniverse;
+  color: white;
+  display: inline-block;
+  padding: 5px;
+  padding-top: 10px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0,.5));
+  word-spacing: 3px;
+}
+.comming11>p{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, .2));
+}
