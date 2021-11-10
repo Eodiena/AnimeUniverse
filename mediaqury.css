@@ -95,7 +95,7 @@
       font-size: 30px;
     }
    .aboutUs{
-      Padding-right:20px;
+      Padding-right:10px;
        Padding-left:10px;
       }
     .cards{
@@ -105,9 +105,9 @@
 
     }
     .card1,.card2,.card3{
-     padding: 60px;
+     padding: 70px;
      width: 100%;
-     height: 350px;
+     height: 380px;
     }
      .screenSorts{
     display: flex;
