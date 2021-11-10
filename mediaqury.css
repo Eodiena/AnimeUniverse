@@ -94,7 +94,10 @@
     .title1{
       font-size: 30px;
     }
-   .aboutUs{padding-left:10px; padding-right:20px;}
+   .aboutUs{
+      padding-right: 5%;
+      padding-left: 10%;
+    }
     .cards{
       flex-direction: column;
       height: 94%;
