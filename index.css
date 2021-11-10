@@ -1062,7 +1062,7 @@ form .submit>input:hover{
   animation-iteration-count: infinite;
   animation-duration: 5s;
   animation-direction: alternate;
-  background-size: 100% 100vh;
+  background-size:cover;
 }
 @keyframes slider {
  0%{background-image: url('https://firebasestorage.googleapis.com/v0/b/free-5a01a.appspot.com/o/Google%20Pixel%204%20XL%20Screenshot%201.png?alt=media&token=a21e79bb-5d31-432c-9d54-a69b30b44125');} 
