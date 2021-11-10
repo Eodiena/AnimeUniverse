@@ -9,6 +9,13 @@
 
 <url>
   <loc>https://www.animeuniverse.ml/</loc>
+  <loc>https://www.animeuniverse.ml/#Home</loc>
+    <loc>https://www.animeuniverse.ml/#About</loc>
+      <loc>https://www.animeuniverse.ml/#Contact</loc>
+        <loc>https://www.animeuniverse.ml/#Down</loc>
+  
+  
+  
   <lastmod>2021-11-10T04:26:59+00:00</lastmod>
 </url>
 
