@@ -95,8 +95,8 @@
       font-size: 30px;
     }
    .aboutUs{
-      Padding-right:20%;
-       Padding-left:10%;
+      Padding-right:20px;
+       Padding-left:10px;
       }
     .cards{
       flex-direction: column;
